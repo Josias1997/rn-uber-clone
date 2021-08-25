@@ -8,13 +8,13 @@ const data = [
 		id: "123",
 		icon: "home",
 		location: "Home",
-		destination: "Ouagadougou, Pissy, Burkina Faso"
+		destination: "Ouaga Inter, Ouagadougou, Burkina Faso"
 	},		
 	{
 		id: "456",
 		icon: "briefcase",
 		location: "Work",
-		destination: "Ouaga 2000, Burkina Faso"
+		destination: "Ouaga 2000, Ouagadougou, Burkina Faso"
 	}
 ]
 
@@ -23,9 +23,9 @@ const NavFavourites = () => {
 		<FlatList
 			data={data}
 			keyExtractor={item => item.id}
-			itemSeparatorComponent={() => (
+			ItemSeparatorComponent={() => (
 				<View
-					style={tw`bg-gray`} 
+					style={[tw`bg-gray-200`, { height: 0.5 }]} 
 				/>
 			)}
 			renderItem={({ item: { location, destination, icon } }) => (
